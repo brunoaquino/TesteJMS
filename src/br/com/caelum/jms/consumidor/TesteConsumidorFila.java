@@ -15,6 +15,8 @@ import javax.naming.InitialContext;
 
 public class TesteConsumidorFila {
 	public static void main(String[] args) throws Exception {
+		System.setProperty("org.apache.activemq.SERIALIZABLE_PACKAGES", "*");
+
 		InitialContext context = new InitialContext();
 
 		ConnectionFactory factory = (ConnectionFactory) context.lookup("ConnectionFactory");
